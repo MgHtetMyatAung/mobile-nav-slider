@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Product = ({className}) => {
+const Product = ({ className }) => {
   return (
-    <div className={className}>Product</div>
-  )
-}
+    <div className={className} style={{ background: "green" }}>
+      Product
+    </div>
+  );
+};
 
-export default Product
+export default Product;
