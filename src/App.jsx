@@ -3,6 +3,7 @@ import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import About from "./pages/About";
+import Map from "./pages/Map";
 
 const data = [
   {
@@ -19,6 +20,11 @@ const data = [
     id: 3,
     path: "/about",
     component: <About className={"container animate__animated animate__fadeIn"} />,
+  },
+  {
+    id: 4,
+    path: "/map",
+    component: <Map className={"container animate__animated animate__fadeIn"} />,
   },
 ];
 
@@ -41,7 +47,7 @@ const App = () => {
 
   const handleTouchEnd = () => {
     const screenWidth = window.innerWidth;
-    const threshold = screenWidth / 3;
+    const threshold = screenWidth / 4;
 
     if (currentX < -threshold && position < data.length - 1) {
       setPosition((prevPosition) => prevPosition + 1);
