@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import About from "./pages/About";
@@ -31,7 +31,6 @@ const data = [
 const App = () => {
   const [position, setPosition] = useState(0);
   const sliderRef = useRef(null);
-  const location = useLocation();
   const navigate = useNavigate();
   let startX = 0;
   let currentX = 0;
